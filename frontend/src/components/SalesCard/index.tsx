@@ -1,3 +1,6 @@
+import DatePicker, { registerLocale } from "react-datepicker";
+import ptBR from 'date-fns/locale/pt-BR'
+import "react-datepicker/dist/react-datepicker.css";
 import NotificationButton from '../NotificationButton'
 import './styles.css'
 
@@ -7,10 +10,22 @@ function SalesCard() {
             <h2 className="dsmeta-sales-title">Vendas</h2>
             <div>
                 <div className="dsmeta-form-control-container">
-                    <input className="dsmeta-form-control" type="text" />
+                    <DatePicker
+                        selected={minDate}
+                        onChange={(date: Date) => setMinDate(() => date)}
+                        className="dsmeta-form-control"
+                        dateFormat="dd/MM/yyyy"
+                        locale={ptBR}
+                    />
                 </div>
                 <div className="dsmeta-form-control-container">
-                    <input className="dsmeta-form-control" type="text" />
+                    <DatePicker
+                        selected={minDate}
+                        onChange={(date: Date) => setMinDate(() => date)}
+                        className="dsmeta-form-control"
+                        dateFormat="dd/MM/yyyy"
+                        locale={ptBR}
+                    />
                 </div>
             </div>
 
